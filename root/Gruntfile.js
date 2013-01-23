@@ -172,8 +172,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-templater');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'less', 'concat', 'uglify']);
-  grunt.registerTask('min', ['uglify']);
+  grunt.registerTask('default', ['jshint', 'qunit', 'template', 'concat', 'uglify']);
+  grunt.registerTask('min', ['concat', 'uglify']);
   grunt.registerTask('test', ['qunit']);
   grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('css', ['less']);

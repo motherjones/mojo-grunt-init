@@ -20,4 +20,30 @@ make new project:
 
 cd ~/workspace
 mkdir new_project
+
 grunt-init mojo
+sudo npm install
+
+
+do stuff with your new project:
+
+run a local server on port 9001:
+grunt serve
+
+turn less into css files(broken till version 0.4.0rc5 is pushed to node)
+grunt less
+
+minify js
+grunt min
+
+test js
+grunt test
+
+lint js
+grunt lint
+
+make new html from templates
+grunt hb
+
+make new demo (missing less for now)
+grunt fab
