@@ -69,6 +69,18 @@ module.exports = function(grunt) {
         src: ['dev/test/*.js']
       },
     },
+    smoosher : {
+        dev : {
+            files : {
+                'demo/pastable.html' : ['dev/<%= pkg.name %>.html']
+            }
+        },
+        demo : {
+            files: {
+                'demo/pastable.min.html' : ['demo/<%= pkg.name %>.html']
+            }
+        }
+    }
     template: {
       dev: {
         src: 'dev/<%= pkg.name %>.hb',
@@ -170,6 +182,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-templater');
+  grunt.loadNpmTasks('grunt-html-smoosher');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit', 'template', 'concat', 'uglify']);
