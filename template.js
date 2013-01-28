@@ -54,7 +54,7 @@ exports.template = function(grunt, init, done) {
         //"dustjs-linkedin": "~1.1.1", nope going with handlebars
         "handlebars": "~1.0.8",
         "hbs": "~2.0.1",
-        "grunt-templater": "0.0.3-1"
+        "grunt-templater": "0.0.3-1",
         "grunt-html-smoosher": "0.1.0"
       };
 
