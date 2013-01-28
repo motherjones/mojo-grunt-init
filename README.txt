@@ -27,10 +27,13 @@ sudo npm install
 
 do stuff with your new project:
 
+pull new json from gdoc (TODO, write this plugin):
+grunt ???? 
+
 run a local server on port 9001:
 grunt serve
 
-turn less into css files(broken till version 0.4.0rc5 is pushed to node)
+turn less into css files
 grunt less
 
 minify js
@@ -45,5 +48,5 @@ grunt lint
 make new html from templates
 grunt hb
 
-make new demo (missing less for now)
+make new demo
 grunt fab
