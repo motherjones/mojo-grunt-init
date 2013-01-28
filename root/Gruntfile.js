@@ -185,13 +185,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html-smoosher');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'template', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'qunit', 'template', 'concat', 'uglify', 'less']);
   grunt.registerTask('min', ['concat', 'uglify']);
   grunt.registerTask('test', ['qunit']);
   grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('css', ['less']);
   grunt.registerTask('hb', ['template']);
-  grunt.registerTask('fab', ['template', 'concat', 'uglify']);
+  grunt.registerTask('fab', ['template', 'concat', 'uglify', 'less']);
   grunt.registerTask('serve', ['connect', 'watch']);
 
 };
