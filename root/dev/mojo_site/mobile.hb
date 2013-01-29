@@ -249,7 +249,7 @@ a.fb_button_small_rtl:active{background-position:right -458px}
   <div class="content"><script>
 document.write('<iframe src="/ad_mobile.html?ad_location=x05&ad_locations=x05,x15&additional_classes=none&RNS=' 
         + mobile_ad_RNS + '" frameborder="0" style="height: 50px; width: 100%; overflow: hidden;"></iframe>');
-</script><iframe src="./mobile_files/ad_mobile.html" frameborder="0" style="height: 50px; width: 100%; overflow: hidden;"></iframe></div>
+</script></div>
 </div>
   </div>
 <div id="page">
