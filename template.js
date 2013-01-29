@@ -46,7 +46,7 @@ exports.template = function(grunt, init, done) {
         'grunt-contrib-concat': '~0.1.2rc5',
         'grunt-contrib-uglify': '0.1.1rc5',
 // ugh not actually helpful       'grunt-contrib-handlebars': '~0.4.0rc5',
-        'grunt-contrib-less': '~0.4.0rc5',
+        'grunt-contrib-less': '~0.5.0rc7',
         'grunt-contrib-watch': '~0.2.0rc5',
         'grunt-contrib-connect': '0.1.0',
         //'grunt-contrib-connect': '~0.1.1rc5',
@@ -55,7 +55,8 @@ exports.template = function(grunt, init, done) {
         "handlebars": "~1.0.8",
         "hbs": "~2.0.1",
         "grunt-templater": "0.0.3-1",
-        "grunt-html-smoosher": "0.1.0"
+        "grunt-html-smoosher": "0.1.0",
+        "grunt-gss-pull": "0.1.1"
       };
 
     props.keywords = [];

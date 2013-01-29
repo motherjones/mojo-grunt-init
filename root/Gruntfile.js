@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "dev/css/style.css": "dev/css/*.less"
+          "dev/css/<%= pkg.name %>.css": "dev/css/*.less"
         }
       },
       production: {
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "demo/css/style.min.css": "dev/css/*.less"
+          "demo/css/<%= pkg.name %>.min.css": "dev/css/*.less"
         }
       }
     },
@@ -43,11 +43,11 @@ module.exports = function(grunt) {
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'demo/<%= pkg.name %>.min.js'
+        dest: 'demo/js/<%= pkg.name %>.min.js'
       },
     },
     qunit: {
-      files: ['dev/test/**/*.html']
+      all: ['dev/test/**/*.html']
     },
     jshint: {
       gruntfile: {
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
                 'demo/pastable.min.html' : ['demo/<%= pkg.name %>.html']
             }
         }
-    }
+    },
     template: {
       dev: {
         src: 'dev/<%= pkg.name %>.hb',
@@ -104,6 +104,13 @@ module.exports = function(grunt) {
             return object;
         })()
       }
+    },
+    gss_pull: {
+        base: {
+            files: {
+                'dev/data/<%= pkg.name %>.json' : ['0AswaDV9q95oZdE4wVHFZYXlic0tHaU5QNWRqYzUxU0E']
+            }
+        }
     },
     connect: {
         server: {
@@ -183,15 +190,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-templater');
   grunt.loadNpmTasks('grunt-html-smoosher');
+  grunt.loadNpmTasks('grunt-gss-pull');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'template', 'concat', 'uglify', 'less']);
+  grunt.registerTask('default', ['gss_pull', 'jshint', 'connect', 'qunit', 'template', 'concat', 'uglify', 'less', 'smoosher']);
   grunt.registerTask('min', ['concat', 'uglify']);
-  grunt.registerTask('test', ['qunit']);
+  grunt.registerTask('test', ['connect', 'qunit']);
   grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('css', ['less']);
   grunt.registerTask('hb', ['template']);
-  grunt.registerTask('fab', ['template', 'concat', 'uglify', 'less']);
+  grunt.registerTask('pull', ['gss_pull']);
+  grunt.registerTask('fab', ['gss_pull', 'template', 'concat', 'uglify', 'less', 'smoosher']);
   grunt.registerTask('serve', ['connect', 'watch']);
 
 };

@@ -1,7 +1,7 @@
 {
   "dev/js/name.js": "dev/js/{%= name %}.js",
-  "dev/test/name_test.js": "dev/text/{%= name %}_test.js",
-  "dev/test/name_test.html": "dev/text/{%= name %}_test.html",
+  "dev/test/name_test.js": "dev/test/{%= name %}_test.js",
+  "dev/test/name_test.html": "dev/test/{%= name %}_test.html",
   "dev/name.hb": "dev/{%= name %}.hb",
   "dev/css/name.less": "dev/css/{%= name %}.less",
   "dev/data/name.json": "dev/data/{%= name %}.json"
