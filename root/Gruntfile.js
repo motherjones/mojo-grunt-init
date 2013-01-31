@@ -147,8 +147,8 @@ module.exports = function(grunt) {
                                 var template = fs.readFileSync(hb_file, 'utf-8');
                                 var json = require(json_file);
                                 // ugh okay so our serving is always gonna be in the dev env
-                                json.css = 'css/' + package_name + '.css';
-                                json.js = 'js/' + package_name + '.js';
+                                json.css = '/css/' + package_name + '.css';
+                                json.js = '/js/' + package_name + '.js';
 
                                 var compiled = hbs.compile(template);
                                 fs.writeFileSync(options.base + req.url, compiled(json), 'utf-8', function(err) {
