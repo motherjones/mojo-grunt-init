@@ -20,15 +20,15 @@ make new project:
 
 cd ~/workspace
 mkdir new_project
-
+cd new_project
 grunt-init mojo
 sudo npm install
 
 
 do stuff with your new project:
 
-pull new json from gdoc (TODO, write this plugin):
-grunt ???? 
+pull new json from gdoc 
+grunt pull 
 
 run a local server on port 9001:
 grunt serve
